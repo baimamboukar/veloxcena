@@ -1,0 +1,6 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\processing\\core\\library\\jna-3.2.5.jar"
+  ]
+}
