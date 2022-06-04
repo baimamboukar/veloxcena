@@ -32,11 +32,11 @@ float gazeScaledY = 0;
 int[] waitPosx = {150, 115, 80, 45, 10}; 
 int waitPosy = 190;
 
-float displayScale = 1.5f;
-float bgVol = 0.2f;
-float speechVol = 0.5f;
+float displayScale = 1.0f;
+float bgVol = 1.0f;
+float speechVol = 1.0f;
 float panL = -1.0f, panM = 0.0f, panR = 1.0f;
-float levelIntroWaitTime = 2;
+float levelIntroWaitTime = 7;
 
 boolean hasEyetracker = false;
 IViewNative.SampleData eyetrackingSample;
@@ -312,18 +312,22 @@ void drawEndscreenWin()
 void drawEndLevel()
     {                       
     image(bgimg, 1, 1);
-    textSize(65);
+    textSize(100);
     textFont(nameFont);
-    text("VELOXCENA", 100, 325);
+    text("VELOXCENA", 450, 325);
     textFont(fontFood);
     text("Your Points : " + ling.getNumPoints(), 300, 400);
-    text("You have completed the level :) Press Enter to continue", 100, 475);
+    text("You have completed the level 🎉! Press Enter to continue", 300, 475);
 }
 
 void drawLevelIntro()
     {
     image(bgimg, 1, 1);
+    textSize(120);
+    textFont(nameFont);
+    text("VELOXCENA 🍔🍖", 450, 325);
     image(lvlIntroImgs[Level.getCurrentLevel() - 1], 1, 1);
+    
 }
 
 //Checks the status of the current waiting customer
